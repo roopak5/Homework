@@ -7,10 +7,10 @@ csvpath = os.path.join('..', 'budget_data.csv')
 
 diff = 0
 
-Date = [] #dates
-Price = []  # money
-Profit = [] #change
-Average_profit = [] #change alt
+Date = [] 
+Price = []  
+Profit = [] 
+Average_profit = [] 
 
 total_months = 0
 
@@ -26,7 +26,7 @@ with open(csvpath, newline="") as csvfile:
         
         total += int(row[1])
 
-# #add title
+ #add title
         Date.append(row[0])
 
 # #add Amount
@@ -40,6 +40,7 @@ with open(csvpath, newline="") as csvfile:
 
 
 total_months = len(Date)
+
 #Average change
 
 average_change = (Price[-1] - Price[0])/(len(Price)-1)
